@@ -12,7 +12,7 @@ Actors of the system:
 
 Functional requirements
 
-- Customer should search for restaurants, choose menue items and create an order.
+- Customer should search for restaurants, choose menu items and create an order.
 - Customer should be able to see the status of its order.
 - Restaurants should be able to see orders and accept/reject.
 - Drivers should be able to see orders that are ready for pickup and deliver them.
