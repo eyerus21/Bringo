@@ -55,8 +55,8 @@ spec:
       serviceAccountName: awesome-user
       containers:
         - name: user
-          image: gcr.io/mythic-producer-328820/user:1.0
-          imagePullPolicy: IfNotPresent
+          image: muleno/user-svc:latest
+          imagePullPolicy: Alwayst
           envFrom:
             - secretRef:
                 name: user-secret
