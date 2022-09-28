@@ -73,8 +73,14 @@ spec:
               value: "8081"
             - name: GROUP_ID
               value: "group_id"
-            - name: TOPIC_NAME
+#            - name: TOPIC_NAME
+#              value: "order-topic"
+            - name: ORDER_TOPIC
               value: "order-topic"
+            - name: SAVE_TOPIC
+              value: "save-topic"
+            - name: DELETE_TPOIC
+              value: "delete-topic"
             - name: DB_USER
               value: "restaurant"
             - name: DB_PASSWORD
