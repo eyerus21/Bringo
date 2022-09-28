@@ -21,9 +21,11 @@ metadata:
     app: restaurant
     service: restaurant
 spec:
+  type: NodePort
   ports:
     - port: 8081
       name: http
+      nodePort: 30081
   selector:
     app: restaurant
 ---
