@@ -9,6 +9,7 @@ metadata:
     name: user
 type: Opaque
 stringData:
+  mongodb-password: userpassword
   JWT_SECRET: lJK4LjppNRRKhnr42vDzr5wfibracq5BVcW0dzeB6Mk
   JWT_EXPIRE: "604800000"
 ---
@@ -56,7 +57,7 @@ spec:
       containers:
         - name: user
           image: muleno/user-svc:latest
-          imagePullPolicy: Alwayst
+          imagePullPolicy: Always
           envFrom:
             - secretRef:
                 name: user-secret
@@ -72,7 +73,7 @@ spec:
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: user-mongodb
+                  name: user-secret
                   key: mongodb-password
             - name: KAFKA_HOSTNAME
               value: "my-kafka.default:9092"
