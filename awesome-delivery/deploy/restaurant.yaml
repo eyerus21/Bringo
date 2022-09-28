@@ -2,6 +2,17 @@
 # Restaurant service
 ##################################################################################################
 apiVersion: v1
+kind: Secret
+metadata:
+  name: restaurant-secret
+  labels:
+    name: user
+type: Opaque
+stringData:
+  mongodb-password: restaurantpassword
+  JWT_SECRET: lJK4LjppNRRKhnr42vDzr5wfibracq5BVcW0dzeB6Mk
+  JWT_EXPIRE: "604800000"
+apiVersion: v1
 kind: Service
 metadata:
   name: restaurant
@@ -44,8 +55,8 @@ spec:
       serviceAccountName: awesome-restaurant
       containers:
         - name: restaurant
-          image: gcr.io/mythic-producer-328820/restaurant-svc:1.1
-          imagePullPolicy: IfNotPresent
+          image: muleno/restaurant.svc:latest
+          imagePullPolicy: Always
           env:
             - name: DB_HOSTNAME
               value: "restaurant-mongodb.default"
@@ -66,7 +77,7 @@ spec:
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: restaurant-mongodb
+                  name: restaurant-secret
                   key: mongodb-password
           ports:
             - containerPort: 8080
