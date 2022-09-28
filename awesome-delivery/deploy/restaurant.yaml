@@ -22,10 +22,10 @@ metadata:
     service: restaurant
 spec:
   ports:
-    - port: 8080
+    - port: 8081
       name: http
   selector:
-    app: order
+    app: restaurant
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -68,7 +68,7 @@ spec:
             - name: KAFKA_HOSTNAME
               value: "my-kafka.default:9092 "
             - name: SERVER_PORT
-              value: "8080"
+              value: "8081"
             - name: GROUP_ID
               value: "group_id"
             - name: TOPIC_NAME
@@ -81,4 +81,4 @@ spec:
                   name: restaurant-secret
                   key: mongodb-password
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
