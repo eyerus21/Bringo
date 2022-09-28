@@ -6,7 +6,7 @@ kind: Secret
 metadata:
   name: restaurant-secret
   labels:
-    name: user
+    name: restaurant
 type: Opaque
 stringData:
   mongodb-password: restaurantpassword
