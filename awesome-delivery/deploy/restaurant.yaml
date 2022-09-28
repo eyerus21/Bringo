@@ -55,7 +55,7 @@ spec:
       serviceAccountName: awesome-restaurant
       containers:
         - name: restaurant
-          image: muleno/restaurant.svc:latest
+          image: muleno/restaurant-svc:latest
           imagePullPolicy: Always
           env:
             - name: DB_HOSTNAME
