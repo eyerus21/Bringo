@@ -60,7 +60,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: DB_HOSTNAME
-              value: "restaurant-mongodb.default"
+              value: "restaurant-mongodb.default.svc.cluster.local"
             - name: DB_PORT
               value: "27017"
             - name: DB_DATABASE
