@@ -75,12 +75,6 @@ spec:
                   key: mongodb-password
             - name: KAFKA_HOSTNAME
               value: "my-kafka.default:9092"
-            - name: RABBITMQ_HOSTNAME
-              value: "my-rabbitmq.default"
-            - name: RABBITMQ_USER
-              value: "guest"
-            - name: RABBITMQ_PASSWORD
-              value: "guest"
           ports:
             - containerPort: 8080
 ---
