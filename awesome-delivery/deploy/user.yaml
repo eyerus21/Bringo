@@ -21,7 +21,6 @@ metadata:
     app: user
     service: user
 spec:
-type: LoadBalancer
   ports:
     - port: 8080
       name: http
