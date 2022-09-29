@@ -57,7 +57,7 @@ spec:
       serviceAccountName: awesome-driver
       containers:
         - name: driver
-          image: gcr.io/mythic-producer-328820/driver:1.1
+          image: muleno/driver-svc:latest
           imagePullPolicy: IfNotPresent
           env:
             - name: DB_HOSTNAME
