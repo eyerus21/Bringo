@@ -71,7 +71,7 @@ spec:
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: driver-mongodb
+                  name: driver-secret
                   key: mongodb-password
             - name: KAFKA_HOSTNAME
               value: "my-kafka.default:9092"
