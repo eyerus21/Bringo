@@ -9,6 +9,7 @@ metadata:
     app: notification
     service: notification
 spec:
+  type: LoadBalancer
   ports:
     - port: 8080
       name: http
@@ -44,8 +45,8 @@ spec:
       serviceAccountName: awesome-notification
       containers:
         - name: notification
-          image: gcr.io/mythic-producer-328820/notification:1.0
-          imagePullPolicy: IfNotPresent
+          image: muleno/notification-svc:latest
+          imagePullPolicy: Always
           env:
             - name: SERVER_PORT
               value: "8080"
