@@ -58,7 +58,7 @@ spec:
       containers:
         - name: driver
           image: muleno/driver-svc:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
             - name: DB_HOSTNAME
               value: "driver-mongodb.default"
