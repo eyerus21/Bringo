@@ -23,7 +23,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 8082
+    - port: 8080
       name: http
   selector:
     app: driver
@@ -76,6 +76,6 @@ spec:
             - name: KAFKA_HOSTNAME
               value: "my-kafka.default:9092"
           ports:
-            - containerPort: 8082
+            - containerPort: 8080
 ---
 
