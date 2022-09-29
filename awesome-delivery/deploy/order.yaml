@@ -78,12 +78,9 @@ spec:
             - name: RABBITMQ_HOSTNAME
               value: "my-rabbitmq.default"
             - name: RABBITMQ_USER
-              value: "user"
+              value: "guest"
             - name: RABBITMQ_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: my-rabbitmq
-                  key: rabbitmq-password
+              value: "guest"
           ports:
             - containerPort: 8080
 ---
