@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - name: app
-          image: gcr.io/mythic-producer-328820/search-svc:1.0
+          image: muleno/search-svc:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
@@ -48,6 +49,7 @@ kind: Service
 metadata:
   name: search-svc
 spec:
+  type: LoadBalancer
   selector:
     app: search-svc
   ports:
