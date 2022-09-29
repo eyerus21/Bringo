@@ -9,7 +9,6 @@ metadata:
     app: notification
     service: notification
 spec:
-  type: LoadBalancer
   ports:
     - port: 8080
       name: http
